@@ -3,7 +3,7 @@ class CreateBooks < ActiveRecord::Migration
     create_table :books do |t|
       t.integer :author_id
       t.string :title
-      t.string :color
+      t.string :color_id
       t.string :isbn
       t.integer :genre_id
 
