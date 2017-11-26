@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125133723) do
+ActiveRecord::Schema.define(version: 20171126155613) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "firstname"
@@ -23,15 +23,9 @@ ActiveRecord::Schema.define(version: 20171125133723) do
   create_table "books", force: :cascade do |t|
     t.integer  "author_id"
     t.string   "title"
-    t.string   "colo_idr"
+    t.integer  "color_id"
     t.string   "isbn"
     t.integer  "genre_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +33,12 @@ ActiveRecord::Schema.define(version: 20171125133723) do
   create_table "colors", force: :cascade do |t|
     t.string   "name"
     t.string   "hex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
